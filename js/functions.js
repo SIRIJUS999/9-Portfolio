@@ -1,27 +1,79 @@
 "use strict";
-function dinamineStatistika1( projects ) {
-    var HTML = '';
-        HTML += '<div class="img" style="margin-bottom: 25px;"></div><div class="value" style="font-size: 35px; font-weight: 600;">'+projects+'</div>';
-        HTML += '<div class="title" style="margin-top: 15px; padding: 0 10px; font-size: 12px;"><b>TOTAL PROJECTS</b></div>';
+
+/* HEADER */
+
+
+
+/* HERO */
+
+
+
+/* CLIENT LOGOS */
+
+
+
+/* ABOUT MYSELF */
+
+
+
+/* STATISTICS and SERVICE OFFERS */
+function renderCards( data ) {
+    var HTML = '',
+        good_ones = 0;
+    
+    if ( !Array.isArray(data) || data.length === 0 ) {
         return HTML;
-}
-function dinamineStatistika2( won ) {
-    var HTML = '';
-        HTML += '<div class="img" style="margin-bottom: 25px;"></div><div class="value" style="font-size: 35px; font-weight: 600;">'+won+'</div>';
-        HTML += '<div class="title" style="margin-top: 15px; padding: 0 10px; font-size: 12px;"><b>TROPHY WON</b></div>';
+    }
+
+    for ( var i=0; i<data.length; i++ ) {
+        // tikriname ar yra reikiamos reiksmes objekte
+        if ( !data[i].icon ||
+             typeof(data[i].icon) !== 'string' ||
+             data[i].icon.length < 1 ||
+             !data[i].number ||
+             (''+data[i].number).length > 9 ||
+             !data[i].title ||
+             typeof(data[i].title) !== 'string' ||
+             data[i].title.length < 1 ) {
+            continue;
+        }
+        // tikriname ar nevirsijome leistimu sugeneruoti elementu skaiciaus
+        if ( good_ones >= 4 ) {
+            break;
+        }
+        HTML += '<div class="card">\
+                    <i class="fa fa-'+data[i].icon+'"></i>\
+                    <div class="number">'+data[i].number+'</div>\
+                    <div class="title">'+data[i].title+'</div>\
+                </div>';
+        good_ones++;
+    }
     return HTML;
 }
 
-function dinamineStatistika3(  ) {
-    var HTML = '';
-        HTML += '<div class="img" style="margin-bottom: 25px;"></div><div class="value" style="font-size: 35px; font-weight: 600;">'+staff+'</div>';
-        HTML += '<div class="title" style="margin-top: 15px; padding: 0 10px; font-size: 12px;"><b>EXPERIENCES STAFF</b></div>';
-    return HTML;
-}
 
-function dinamineStatistika4( clients ) {
-    var HTML = '';
-        HTML += '<div class="img" style="margin-bottom: 25px;"></div><div class="value" style="font-size: 35px; font-weight: 600;">'+clients+'</div>'
-        HTML += '<div class="title" style="margin-top: 15px; padding: 0 10px; font-size: 12px;"><b>HAPPY CLIENTS</b></div>';
-    return HTML;
-}
+/* SKILLS */
+
+
+
+/* LATEST WORKS */
+
+
+
+/* JOB HISTORY */
+
+
+
+/* TESTIMONIALS */
+
+
+
+/* CONTACT ME */
+
+
+
+/* FOOTER */
+
+
+
+/* BACKT TO TOP */
