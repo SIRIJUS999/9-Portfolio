@@ -161,7 +161,77 @@ body * {
 
 
 /* SKILLS */
+/* SKILLS */
+#skills > .container > {
+    display: inline-block;
+    width: 100%;
+}
+    #skills .container > .block-title {
+        display: inline-block; /* Sv. Marija visam container */
+    }
+        #skills .container > .block-title > .left{
+            display: inline-block; /* Sv. Marija container kairiam blokui */
+            float: left;
+            width: 40%;
+            text-align: left;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-top: 60px;
+        }
+        #skills .container > .block-title > .right  {
+            display: inline-block; /* Sv. Marija container desiniam blokui */
+            float: left;
+            width: 60%;
+            padding-left: 3%;
+        }
 
+        .progress-bar {
+            display: inline-block;
+            width: 100%;
+            margin: 15px 0;
+        }
+            .progress-bar > .texts {
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 10px;
+                color:black;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 20px;
+            }
+                .progress-bar > .texts > .title {
+                    display: inline-block;
+                    float: left;
+                }
+                .progress-bar > .texts > .value {
+                    display: inline-block;
+                    float: right;
+                }
+            /* Nuocia atsiranda progress-bar-border */
+
+            .progress-bar > .progress-bar-border{
+                display: inline-block;
+                width: 100%;
+                border: 1px solid #CCC;
+                border-radius: 20px;
+                height: 18px;
+            }
+            .progress-bar > .progress-bar-border > .bar {
+                display: inline-block;
+                width: 96%;
+                background-color:#FFF;;
+                margin: 10px 10px;
+            }
+                .progress-bar > .progress-bar-border > .bar > .value {
+                    display: inline-block;
+                    width: 100%;
+                    height: 8px;
+                    float: left;
+                    background-color: #90ACD1;
+                    text-align: right;
+                    line-height: 50px;
+                    font-weight: bold;
+                    margin-top: -6px;
+                }
 
 
 /* LATEST WORKS */
