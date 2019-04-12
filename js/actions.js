@@ -18,11 +18,10 @@
 
 /* STATISTICS and SERVICE OFFERS */
 document.getElementById('statistics_cards').innerHTML = renderCards( statistics );
-
+document.getElementById('offers').innerHTML = renderCards( offers );
 
 /* SKILLS */
 document.getElementById('skills_progress_bars').innerHTML = renderSkills( skills );
-
 
 /* LATEST WORKS */
 

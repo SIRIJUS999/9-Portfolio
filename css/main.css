@@ -14,6 +14,11 @@ body * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body > * {
+    display: inline-block;
+    width: 100%;
+}
+
 .container {
     display: inline-block;
     padding: 80px 0;
@@ -93,11 +98,78 @@ body * {
 }
 
 /* HEADER */
-
+body {
+    position: relative;
+}
+body > header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#header {
+    padding: 10px 0;
+}
+    #header > a {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        float: left;
+    }
+        #header > a > img {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+    #header > .menu {
+        display: inline-block;
+        float: right;
+    }
 
 
 /* HERO */
-
+#hero {
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+}
+    #hero > .secondary-color-hero-background {
+        display: inline-block;
+        float: left;
+        background-color: var(--color-secondary);
+        /* width: calc(50% - 200px); */
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: calc(50% + 200px);
+        bottom: 0;
+        z-index: -1;
+    }
+        #hero > .secondary-color-hero-background > .circle {
+            display: inline-block;
+            background-color: var(--color-secondary);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            position: absolute;
+            top: 37%;
+            left: -150px;
+            bottom: 0;
+        }
+    #hero > .container {
+        padding: 110px 0 0 0;
+    }
+    #hero .hero-content {
+        display: inline-block;
+        float: left;
+        width: 40%;
+    }
+    #hero img {
+        display: inline-block;
+        float: right;
+        width: 40%;
+    }
 
 
 /* CLIENT LOGOS */
@@ -105,7 +177,6 @@ body * {
 
 
 /* ABOUT MYSELF */
-
 
 
 
@@ -125,7 +196,8 @@ body * {
         text-align: center;
         background-color: var(--color-secondary-light);
         word-break: break-word;
-    }
+    } 
+   
         .cards-list > .card > i {
             display: inline-block;
             width: 80px;
@@ -145,8 +217,10 @@ body * {
             font-size: 32px;
             margin-bottom: 15px;
             color: var(--color-black);
+            font-weight: bold; 
         }
-        .cards-list > .card > .title {
+        .cards-list > .card > .title,
+        #offers > .card > .title {
             display: inline-block;
             width: 100%;
             line-height: 28px;
@@ -155,89 +229,143 @@ body * {
             color: var(--color-black);
             text-transform: uppercase;
         }
+        #offers > .card > .p {
+            font-size: 14px;
+            color: #777;
+        }
         .cards-list > .card:last-child {
             margin-right: 0;
+        }
+        #offers > .card:hover {
+            animation-name: card_up;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
+            margin-top: -20px;
+        }
+
+        @keyframes card_up {
+            0% {
+                margin-top: 0px;
+            }
+            100%{
+                margin-top: -20px;
+            }
+        }
+/* SERVICE OFFERS */
+
+#service_offers > .container > .block-title .service-text-block > p{
+    display: inline-block;
+    float: left;
+    width: 45%;
+    margin-top: 20px;
+    line-height: 28px;
+    font-size: 14px;
+    margin-bottom: 70px;
+ }
+        #statistics_cards > .card > .service-title {
+            font-weight: bold;
+            padding-bottom: 15px;
+        }
+        #statistics_cards > .card > .service-text {
+            padding-bottom: 30px;
         }
 
 
 /* SKILLS */
-#skills > .container > {
+#skills > .container > .left {
     display: inline-block;
-    width: 100%;
-}
-    #skills .container > .block-title {
-        display: inline-block; /* Sv. Marija visam container */
+    width: 45%;
+    float: left;
+    margin-top: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
     }
-        #skills .container > .block-title > .left{
-            display: inline-block; /* Sv. Marija container kairiam blokui */
+    
+    #skills > .container > .left > p {
+        display: inline-block;
+        width: 100%;
+        float: left;
+        font-size: 14px;
+        color: #777;
+        margin-top: 20px;
+    }
+    
+#skills > .container > .right {
+    display: inline-block;
+    width: 55%;
+    float: left;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+    .progress-bar {
+        display: inline-block;
+        width: 100%;
+    }
+        .progress-bar > .title {
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            display: inline-block;
             float: left;
-            width: 40%;
-            text-align: left;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            padding-top: 60px;
-        }
-        #skills .container > .block-title > .right  {
-            display: inline-block; /* Sv. Marija container desiniam blokui */
-            float: left;
-            width: 60%;
-            padding-left: 3%;
-        }
-
-        .progress-bar {
+        } 
+        .progress-bar > .bar {
             display: inline-block;
             width: 100%;
-            margin: 15px 0;
+            height: 20px;
+            border: 1px solid #e0e0e0;
+            background: transparent;
+            border-radius: 50px;
+            padding: 5px 8px;
+            margin-bottom: 20px;
         }
-            .progress-bar > .texts {
+            .progress-bar > .bar > .value {
                 display: inline-block;
                 width: 100%;
-                margin-bottom: 10px;
-                color:black;
-                font-weight: bold;
-                font-size: 14px;
-                line-height: 20px;
+                height: 10px;
+                float: left;
+                background-color: #FFF;
             }
-                .progress-bar > .texts > .title {
-                    display: inline-block;
-                    float: left;
-                }
-                .progress-bar > .texts > .value {
-                    display: inline-block;
-                    float: right;
-                }
-            /* Nuocia atsiranda progress-bar-border */
-
-            .progress-bar > .progress-bar-border{
-                display: inline-block;
-                width: 100%;
-                border: 1px solid #CCC;
-                border-radius: 20px;
-                height: 18px;
-            }
-            .progress-bar > .progress-bar-border > .bar {
-                display: inline-block;
-                width: 96%;
-                background-color:#FFF;;
-                margin: 10px 10px;
-            }
-                .progress-bar > .progress-bar-border > .bar > .value {
+                .progress-bar > .bar > .value > .loading-part {
                     display: inline-block;
                     width: 100%;
-                    height: 8px;
-                    float: left;
+                    height: 100%;
                     background-color: #90ACD1;
-                    text-align: right;
-                    line-height: 50px;
-                    font-weight: bold;
-                    margin-top: -6px;
+                    animation-name: progress_bar_loading;
+                    animation-duration: 2s;
+                    animation-iteration-count: 1;
                 }
+                    .progress-bar > .bar > .value > .loading-part > .vertical-line {
+                        width: 1px;
+                        height: 27px;
+                        float: right;
+                        margin-top: -6px;
+                        background: #90acd1;
+                    }
+                    .progress-bar > .bar > .value > .loading-part > .text-value {
+                        display: inline-block;
+                        font-weight: bold;
+                        float: right;
+                        padding-top: 12px;
+                        padding-right: 5px;
+                        font-size: 14px;
+                    }
 
+@keyframes progress_bar_loading {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
 
 /* LATEST WORKS */
 
 
 
 /* JOB HISTORY */
+
 #job_history > .container > .basement{
     display: inline-block;
     float: left;
@@ -301,7 +429,6 @@ body * {
                                 width: 100%;
                                 height: 50%;
                             }
-
 
 /* TESTIMONIALS */
 

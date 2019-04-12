@@ -10,11 +10,29 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div id="hero" class="bg-blue">
-        <div class="container">
-                HERO
+    <header>
+        <div id="header" class="container">
+            <a href="#">
+                <img src="img/Logo.png" alt="">
+            </a>
+            <div class="menu">
+                Menu
+            </div>
+        </div>
+    </header>
 
-        <a href="#" class="btn btn-red">Hire Me</a>
+    <div id="hero">
+        <div class="secondary-color-hero-background">
+            <div class="circle"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <p>I'ts me</p>
+                <h1>Kareem EzZat</h1>
+                <p>Senior Creative Designer and Content Developer</p>
+                <a href="#" class="button">Hire Me</a>
+            </div>
+            <img src="img/banner-img.png" alt="">
         </div>
     </div>
 
@@ -33,73 +51,37 @@
 
     <div id="statistics" class="bg-light-grey">
         <div class="container">
-            <!-- <div id="statistics_cards" class="cards-list">
-                <div class="card">
+            <div id="statistics_cards" class="cards-list">
+                <!-- <div class="card">
                     <i class="fa fa-archive"></i>
                     <div class="number">88888888</div>
                     <div class="title">Total projects</div>
-                </div>
-            </div> -->
+                </div> -->
+            </div>
         </div>
     </div>
 
     <div id="skills">
         <div class="container">
-            <div class="block-title">
-                <div class="left">   
-                    <h2 style="font-weight: 700; font-size: 40px; margin-bottom: 20px; color: #222;">I Got The Skills</h2>
-                    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 14px; line-height: 16px; margin-top: 12px;">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Dolore quasi mollitia rem quisquam atque pariatur, a ut, 
-                    amet illum quibusdam facere vitae delectus reiciendis fugit tempora esse sint deserunt dolorum.</p>
-                </div> 
-                <div class="right"> 
-                    <p style="font-size: 12px; line-height: 16px; margin-top: 10px;">
-                    <div class="progress-bar">
-                        <div class="texts">     
-                            <div class="title">HTML5</div>
-                            <div class="value"></div>
-                        </div>
-                        <div class="progress-bar-border">
-                            <div class="bar">
-                                <div class="value" style="width: 85%;">85%</div>
-                            </div>
-                        </div>   
-                    </div>
-                    <div class="progress-bar">
-                        <div class="texts">     
-                            <div class="title">CSS3</div>
-                            <div class="value"></div>
-                        </div>
-                        <div class="progress-bar-border">
-                            <div class="bar">
-                                <div class="value" style="width: 75%;">75%</div>
-                            </div>
-                        </div>   
-                    </div>
-                    <div class="progress-bar">
-                        <div class="texts">     
-                            <div class="title">J-Query</div>
-                            <div class="value"></div>
-                        </div>
-                        <div class="progress-bar-border">
-                            <div class="bar">
-                                <div class="value" style="width: 90%;">90%</div>
-                            </div>
-                        </div>   
-                    </div>
-                    <div class="progress-bar">
-                        <div class="texts">     
-                            <div class="title">Bootstrap</div>
-                            <div class="value"></div>
-                        </div>
-                        <div class="progress-bar-border">
-                            <div class="bar">
-                                <div class="value" style="width: 60%;">60%</div>
-                            </div>
-                        </div>   
-                    </div>
+            <div class="left">
+                <div class="block-title">
+                    <h2>I Got The Skills</h2>
+                    <div class="line"></div>
                 </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo voluptatibus placeat impedit temporibus quam officiis ipsum quod rem culpa aspernatur minima, assumenda aliquid, modi dignissimos explicabo sed rerum? Libero!</p>
+            </div>
+            <div id="skills_progress_bars" class="right">
+                <!-- <div class="progress-bar">
+                    <div class="title">HTML5</div>
+                    <div class="bar">
+                        <div class="value" style="width: 85%;">
+                            <div class="loading-part">
+                                <div class="vertical-line"></div>
+                                <div class="text-value">85%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -212,8 +194,11 @@
             <div class="block-title">
                 <h2>Service Offers</h2>
                 <div class="line"></div>
+                <div class="service-text-block">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p> 
+                </div>
+                <div id="offers" class="cards-list"></div>
             </div>
-            SERVICE OFFERS
         </div>
     </div>
 
@@ -263,6 +248,7 @@
             </div>
         </div>
     </footer>
+
     <script src="js/data.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/actions.js"></script>

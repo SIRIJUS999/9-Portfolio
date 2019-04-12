@@ -39,6 +39,30 @@ var statistics = [
         title: 'Happy clients'
     }
 ];
+/* SERVICE OFFERS */
+var offers = [
+    {
+        icon: 'diamond icon',
+        title: 'Web Design',
+        p: 'If you’re looking blank casvsettes on the web, you may confuse.'
+    },
+    {
+        icon: 'bar-chart icon',
+        title: 'App Development',
+        p: 'If you’re looking blank casvsettes on the web, you may confuse.'
+    },
+    {
+        icon: 'lightbulb-o icon',
+        title: 'Web Development' ,
+        p: 'If you’re looking blank casvsettes on the web, you may confuse.'
+    },
+    {
+        icon: 'dashboard icon',
+        title: 'Web Development',
+        p: 'If you’re looking blank casvsettes on the web, you may confuse.'
+    }
+];
+
 
 /* SKILLS */
 var skills = [
